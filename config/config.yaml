@@ -1,2 +1,17 @@
-###make config here##
 
+#cell-ranger atac usage
+CELLRANGER_PATH: "/bigdata/seymourlab/idiaz026/Apps/cellranger-atac-2.1.0/cellranger-atac"
+CELLRANGER_ref: "/bigdata/seymourlab/idiaz026/Citrus_non-coding_evolution/2023-08-12_cellrangerPWN_redo/PWNplusPlastid"
+scATACraw: "/bigdata/seymourlab/idiaz026/Data/Floral_scATAC/2023-02-20_raw_scATAC_fastq"
+NAME: "PWNplusPlastid"
+#
+
+#Sinto_barcodecleaning
+Nuclear: "?i)^Scaffold_"
+Plastid: "?i)^NC-"
+
+#Socrates
+GFF: "/bigdata/seymourlab/idiaz026/Citrus_non-coding_evolution/2023-08-13_PWN_socrates/WN_HAPA_genes_modCTG.gff"
+CHRFILE: "/bigdata/seymourlab/idiaz026/REFERENCES/PWN_HAPA/WN_HAP_modContigPlus_Plastid_genomeFile.txt"
+MACStempdir: "/bigdata/seymourlab/idiaz026/Citrus_non-coding_evolution/2023-08-13_PWN_socrates/macs2_temp"
+DEMUX: "/bigdata/seymourlab/idiaz026/Citrus_non-coding_evolution/2023-08-13_PWN_socrates/Demuxlet" #PATH TO DEMUXLET
