@@ -14,4 +14,6 @@ Plastid: "?i)^NC-"
 GFF: "/bigdata/seymourlab/idiaz026/Citrus_non-coding_evolution/2023-08-13_PWN_socrates/WN_HAPA_genes_modCTG.gff"
 CHRFILE: "/bigdata/seymourlab/idiaz026/REFERENCES/PWN_HAPA/WN_HAP_modContigPlus_Plastid_genomeFile.txt"
 MACStempdir: "/bigdata/seymourlab/idiaz026/Citrus_non-coding_evolution/2023-08-13_PWN_socrates/macs2_temp"
-DEMUX: "/bigdata/seymourlab/idiaz026/Citrus_non-coding_evolution/2023-08-13_PWN_socrates/Demuxlet" #PATH TO DEMUXLET
+VCFdemux: "/bigdata/seymourlab/idiaz026/Citrus_non-coding_evolution/2023-08-13_PWN_socrates/2023-08-20_scATAC_wgs_renamed.vcf.gz"
+SAMPLENAMES: "SampleNames.txt"
+PICARD: "opt/linux/centos/7.x/x86_64/pkgs/picard/2.18.3/lib/picard.jar"

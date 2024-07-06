@@ -1,0 +1,34 @@
+name: Demuxlet
+channels:
+  - conda-forge
+  - bioconda
+  - r
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1=conda_forge
+  - _openmp_mutex=4.5=2_gnu
+  - bzip2=1.0.8=h7f98852_4
+  - c-ares=1.18.1=h7f98852_0
+  - ca-certificates=2022.6.15=ha878542_0
+  - curl=7.83.1=h2283fc2_0
+  - htslib=1.9=h4da6232_3
+  - keyutils=1.6.1=h166bdaf_0
+  - krb5=1.19.3=h08a2579_0
+  - libcurl=7.83.1=h2283fc2_0
+  - libdeflate=1.12=h166bdaf_0
+  - libedit=3.1.20210910=h7f8727e_0
+  - libev=4.33=h516909a_1
+  - libgcc-ng=12.1.0=h8d9b700_16
+  - libgomp=12.1.0=h8d9b700_16
+  - libnghttp2=1.47.0=he49606f_0
+  - libssh2=1.10.0=ha35d2d1_2
+  - libstdcxx-ng=12.1.0=ha89aaad_16
+  - libzlib=1.2.12=h166bdaf_1
+  - ncurses=6.3=h27087fc_1
+  - openssl=3.0.5=h166bdaf_0
+  - popscle=0.1beta=h2c78cec_0
+  - samtools=1.6=h3f2fef4_8
+  - xz=5.2.5=h516909a_1
+  - zlib=1.2.12=h166bdaf_1
+prefix: /rhome/idiaz026/.conda/envs/Demuxlet
+

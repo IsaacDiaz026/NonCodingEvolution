@@ -31,3 +31,4 @@ cd /bigdata/seymourlab/idiaz026/Citrus_non-coding_evolution/2023-08-13_PWN_socra
 
 VCF=2023-08-20_scATAC_wgs_renamed.vcf.gz
 popscle demuxlet --sam $BAM --vcf $VCF --field GT --out $OUTPUT/Floral_scATAC_fullBam
+

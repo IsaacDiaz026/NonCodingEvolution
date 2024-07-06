@@ -6,7 +6,7 @@ library(dplyr)
 library(doSNOW)
 library(argparse)
 
-args = commandArgs(trailingOnly=TRUE)
+args <- commandArgs(trailingOnly=TRUE)
 
 
 bed <- args[1]
