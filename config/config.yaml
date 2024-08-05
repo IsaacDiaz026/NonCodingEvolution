@@ -17,3 +17,10 @@ MACStempdir: "/bigdata/seymourlab/idiaz026/Citrus_non-coding_evolution/2023-08-1
 VCFdemux: "/bigdata/seymourlab/idiaz026/Citrus_non-coding_evolution/2023-08-13_PWN_socrates/2023-08-20_scATAC_wgs_renamed.vcf.gz"
 SAMPLENAMES: "SampleNames.txt"
 PICARD: "opt/linux/centos/7.x/x86_64/pkgs/picard/2.18.3/lib/picard.jar"
+
+#ACR calling and analysis
+GENRICH: "~/Apps/Genrich-master/Genrich"
+SAMPLEMETA: "MetadataSampleNames.txt"
+WGS: "/bigdata/seymourlab/idiaz026/Citrus_non-coding_evolution/2023-07-04_WGS_variant_callingPWN/Alignments/Merged_bams/Correct_RG/Mark_dup"  #path to clean WGS alignment for each sample
+REFERENCE: "/bigdata/seymourlab/idiaz026/REFERENCES/PWN_HAPA/WN_HapA_modContig.fa"
+PLASTID: "/bigdata/seymourlab/idiaz026/Fairchild/Assembly/Release1.0/References/Plastid_mit_db" #path to chloroplast and mitochondrial blast db

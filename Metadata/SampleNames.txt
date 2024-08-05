@@ -11,7 +11,6 @@ Orlando	IAD_09_S375
 Bouquettier_de_Nice	IAD_10_S376
 Citrus_junos	IAD_11_S377
 Seedless_kishu	IAD_12_S378
-Interdonato_lemon	IAD_13_S379
 Frost_lisbon	IAD_14_S380
 S.emperor_ponkan	IAD_15_S381
 Kao_panne_pummelo	IAD_16_S382
