@@ -21,7 +21,7 @@ jaccard_table <-spread(pairwise.ATAC.shortnames,V2,V3)[,-1]
 jaccard_matrix <- as.matrix(jaccard_table)
 row.names(jaccard_matrix) <- colnames(jaccard_table)
 
-species <- c("Algerian_clementine.sort.CLEAN.bed","C_macrophylla.sort.CLEAN.bed",
+species <- c("Seedless_kishu_sort.CLEAN.bed","C_macrophylla.sort.CLEAN.bed",
              "Kao_panne_pummelo.sort.CLEAN.bed","Microcitrus_australiasica.sort.CLEAN.bed",
              "SCFS_citron.sort.CLEAN.bed")
 
