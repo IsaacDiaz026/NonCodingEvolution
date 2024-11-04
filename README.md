@@ -21,38 +21,32 @@ conda env create -f config/SocratesEnv.yaml
 conda env create -f config/DemuxletEnv.yaml
 
 ## Configuration
-### Edit  paths in config/config.yaml  
-CELLRANGER_PATH: path to cellranger-atac software
-CELLRANGER_ref: path to reference created with cellranger
-scATACraw: path to fastq of single-cell ATAC-seq reads
-NAME: Sample name of reference for cellranger-atac
+### Edit  paths in config/config.yaml
+### for cellranger
+1. CELLRANGER_PATH: path to cellranger-atac software
+2. CELLRANGER_ref: path to reference created with cellranger
+3. scATACraw: path to fastq of single-cell ATAC-seq reads
+4. NAME: Sample name of reference for cellranger-atac
+5. Nuclear: expression for scaffold prefix for nuclear genome for sinto usage
+6. Plastid: expression for scaffold prefix for plastid genome
+7. GFF: gene annotation in gff format
+8. CHRFILE: lengths of scaffolds
 
-Nuclear: expression for scaffold prefix for nuclear genome for sinto usage
-Plastid: expression for scaffold prefix for plastid genome
+### for demultiplexing
+9. MACSpath: path to macs2 software
+10. VCFdemux: path to VCF for demuxlet
+11. SAMPLENAMES: file with atac-seq sample names
+12. PICARD: path to picard software
 
-
-GFF: gene annotation in gff format
-CHRFILE: lengths of scaffolds
-MACSpath: path to macs2 software
-VCFdemux: path to VCF for demuxlet
-SAMPLENAMES: file with atac-seq sample names
-PICARD: path to picard software
-
-
-
-GENRICH: path to genrich software
-SAMPLEMETA: "Metadata/SampleNames.txt"
-WGS: "/path/to/WGS_alignments"
-REFERENCE: "/path/to/reference_genome.fa"
-PLASTID: "/path/to/plastid_blast_db"
-
-
-Create the following conda environments using yaml files:
-snakemake --configfile config/config.yaml --cores <number_of_cores>
+### for ACR calling
+13. GENRICH: path to genrich software
+14. SAMPLEMETA: "Metadata/SampleNames.txt"
+15. WGS: "/path/to/WGS_alignments"
+16. REFERENCE: "/path/to/reference_genome.fa"
+17. PLASTID: "/path/to/plastid_blast_db"
 
 
-
-Pipeline Steps
+## Pipeline Steps
 
 1. Cell Ranger ATAC Processing
 Description: Runs cellranger-atac to process raw scATAC fastq files and generate BAM and fragment files.
@@ -88,7 +82,8 @@ Output: Merged and classified ACR files, visualization plots.
 10. ACR Classification
 Description: Classifies ACRs based on proximity to genes and exons.
 Output: ACRs classified by gene location, overlap with exons, and nearest gene.
-Outputs
+
+## Outputs
 
 The pipeline produces a variety of output files, including:
 
@@ -96,3 +91,4 @@ Filtered BAM files: Located in DEMUX/BAMscATAC/
 Downsampled ACR files: Stored in DownsampledBams/Peaks/
 Merged ACRs: Final classified ACR files for downstream analysis
 Visualization files: Plots summarizing ACRs
+ACRs classified by genomic context ACRs_classified/
