@@ -485,26 +485,7 @@ rule ACRclassification:
 
         bedtools closest -D b -a {output[0]} -b PWN_modCTG_mRNAonly.gff  > {output[4]}
 
-        Rscript 007_Describe_ACRs.R
+        Rscript 004_Describe_ACRs.R {output[2]} {output[3]} 
+
+
         """
-
-
-
-#Rscript /bigdata/seymourlab/idiaz026/Citrus_non-coding_evolution/2023-08-13_PWN_socrates/007_Describe_ACRs.R
-
-echo 'get closest gene (mRNA only) to every ACR using including strand info'
-
-GFF=/bigdata/seymourlab/idiaz026/Citrus_non-coding_evolution/2023-08-13_PWN_socrates/WN_HAPA_genes_modCTG.gff
-
-grep "mRNA" $GFF > /bigdata/seymourlab/idiaz026/Citrus_non-coding_evolution/2023-08-13_PWN_socrates/PWN_modCTG_mRNAonly.gff
-
-MRNA=/bigdata/seymourlab/idiaz026/Citrus_non-coding_evolution/2023-08-13_PWN_socrates/PWN_modCTG_mRNAonly.gff
-
-
-ALL_GENO_ACRS=/bigdata/seymourlab/idiaz026/Citrus_non-coding_evolution/2023-08-13_PWN_socrates/ACRs_classified/ACRs_classified.sort.bed
-SPECIES_ACRS=/bigdata/seymourlab/idiaz026/Citrus_non-coding_evolution/2023-08-13_PWN_socrates/ACRs_classified/Species_level/ACRs_classified.sort.bed
-
-
-bedtools closest -D b -a $ALL_GENO_ACRS -b "$MRNA" > /bigdata/seymourlab/idiaz026/Citrus_non-coding_evolution/2023-08-13_PWN_socrates/ACRs_classified/ACRs_closest.mRNA.txt
-
-bedtools closest -D b -a $SPECIES_ACRS -b "$MRNA" > /bigdata/seymourlab/idiaz026/Citrus_non-coding_evolution/2023-08-13_PWN_socrates/ACRs_classified/Species_level/ACRs_closest.mRNA.txt
