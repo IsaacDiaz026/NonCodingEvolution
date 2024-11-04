@@ -20,27 +20,31 @@ For dependencies, create Conda environments as listed in `config/SocratesEnv.yam
 conda env create -f config/SocratesEnv.yaml
 conda env create -f config/DemuxletEnv.yaml
 
-# Edit  paths in config/config.yaml  
-CELLRANGER_PATH: "/path/to/cellranger-atac"
-CELLRANGER_ref: "/path/to/reference"
-scATACraw: "/path/to/raw_scATAC_fastq"
-NAME: "SampleName"
+## Configuration
+### Edit  paths in config/config.yaml  
+CELLRANGER_PATH: path to cellranger-atac software
+CELLRANGER_ref: path to reference created with cellranger
+scATACraw: path to fastq of single-cell ATAC-seq reads
+NAME: Sample name of reference for cellranger-atac
 
-Nuclear: "?i)^Scaffold_"
-Plastid: "?i)^NC-"
+Nuclear: expression for scaffold prefix for nuclear genome for sinto usage
+Plastid: expression for scaffold prefix for plastid genome
 
-# Socrates and ACR calling
-GFF: "/path/to/genes.gff"
-CHRFILE: "/path/to/contig_lengths.txt"
-VCFdemux: "/path/to/vcf_file.vcf.gz"
-PICARD: "/path/to/picard.jar"
 
-# ACR calling and analysis
-GENRICH: "/path/to/Genrich"
-SAMPLEMETA: "MetadataSampleNames.txt"
+GFF: gene annotation in gff format
+CHRFILE: lengths of scaffolds
+MACSpath: path to macs2 software
+VCFdemux: path to VCF for demuxlet
+SAMPLENAMES: file with atac-seq sample names
+PICARD: path to picard software
+
+
+
+GENRICH: path to genrich software
+SAMPLEMETA: "Metadata/SampleNames.txt"
 WGS: "/path/to/WGS_alignments"
 REFERENCE: "/path/to/reference_genome.fa"
-PLASTID: "/path/to/plastid_db"
+PLASTID: "/path/to/plastid_blast_db"
 
 
 Create the following conda environments using yaml files:
@@ -92,4 +96,3 @@ Filtered BAM files: Located in DEMUX/BAMscATAC/
 Downsampled ACR files: Stored in DownsampledBams/Peaks/
 Merged ACRs: Final classified ACR files for downstream analysis
 Visualization files: Plots summarizing ACRs
-This documentation should provide an accessible overview of each step, with paths configurable as needed for different systems. Let me know if you'd like additional customization!
