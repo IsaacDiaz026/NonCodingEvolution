@@ -1,39 +1,31 @@
-scATAC-Seq Analysis Pipeline
+# scATAC-Seq Analysis Pipeline
 
-This repository provides a Snakemake pipeline for analyzing single-cell ATAC-seq (scATAC-seq) data using various tools, including cellranger-atac, Socrates, Genrich, and bedtools. The pipeline processes raw scATAC fastq files, performs barcode cleaning, demultiplexes cells, and identifies accessible chromatin regions (ACRs).
+This repository provides a Snakemake pipeline for analyzing single-cell ATAC-seq (scATAC-seq) data using various tools, including `cellranger-atac`, `Socrates`, `Genrich`, and `bedtools`. The pipeline processes raw scATAC fastq files, performs barcode cleaning, demultiplexes cells, and identifies accessible chromatin regions (ACRs).
 
-Table of Contents
+## Table of Contents
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [Pipeline Steps](#pipeline-steps)
+- [Outputs](#outputs)
 
-Installation
-Configuration
-Usage
-Pipeline Steps
-Outputs
-Installation
+## Installation
+### Prerequisites
+- Install [Snakemake](https://snakemake.readthedocs.io/)
+- Required software tools: `cellranger-atac`, `sinto`, `samtools`, `R`, `popscle`, `bedtools`, and `ncbi-blast`
+- Ensure access to SLURM for resource allocation on a high-performance computing (HPC) cluster.
 
-Prerequisites
-Install Snakemake
-Required software tools: cellranger-atac, sinto, samtools, R, popscle, bedtools, and ncbi-blast
-Ensure access to SLURM for resource allocation on a high-performance computing (HPC) cluster.
-Set up Conda environments
-For dependencies, create Conda environments as listed in config/SocratesEnv.yaml and config/DemuxletEnv.yaml. Example:
-
-
+### Set up Conda environments
+For dependencies, create Conda environments as listed in `config/SocratesEnv.yaml` and `config/DemuxletEnv.yaml` 
 conda env create -f config/SocratesEnv.yaml
 conda env create -f config/DemuxletEnv.yaml
-Configuration
 
-The pipeline uses a configuration file located at config/config.yaml. Modify the paths to suit your data and environment.
-
-Example config.yaml structure:
-
-# cell-ranger atac usage
+# Edit  paths in config/config.yaml  
 CELLRANGER_PATH: "/path/to/cellranger-atac"
 CELLRANGER_ref: "/path/to/reference"
 scATACraw: "/path/to/raw_scATAC_fastq"
 NAME: "SampleName"
 
-# Sinto barcode cleaning
 Nuclear: "?i)^Scaffold_"
 Plastid: "?i)^NC-"
 
